@@ -39,26 +39,6 @@ spec:
     stage('Build') {
       steps {
         sh 'npm install && npm run build'
-      }
-    }
-
-    stage('SonarQube analysis') {
-      steps {
-        withSonarQubeEnv(credentialsId: "new", installationName: "new"){
-          sh 'npm run sonar'
-        }
-      }
-    }
-
-    stage('Quality Gate') {
-      steps {
-        timeout(time: 10, unit: "MINUTES") {
-          script {
-            def qg = waitForQualityGate()
-            if (qg.status != 'OK') {
-               error "Pipeline aborted due to quality gate failure: ${qg.status}"
-            }
-          }
         }
       }
     }
