@@ -40,7 +40,6 @@ spec:
       steps {
         sh 'npm install && npm run build'
         }
-      }
     }
 
     stage('Push Image to Docker Hub') {
