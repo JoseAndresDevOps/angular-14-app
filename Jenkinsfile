@@ -79,13 +79,6 @@ spec:
         sh 'npm run build &'
 
         sleep 20
-
-        sh 'ls -la'
-
-        sh 'cd src'
-
-        sh 'ls -la'
-
       }
 
     }
@@ -152,7 +145,7 @@ spec:
 
         }
 
-        sh 'git clone https://github.com/JoseAndresDevOps/angular-14-app.git configuracion --branch test-implementation'
+        sh 'git clone https://github.com/JoseAndresDevOps/kubernetes-helm-docker-config.git configuracion --branch test-implementation'
 
         sh 'kubectl apply -f configuracion/kubernetes-deployment/angular-14-app/manifest.yml -n default --kubeconfig=configuracion/kubernetes-config/config'
 
