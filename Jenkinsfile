@@ -93,4 +93,5 @@ spec:
     always {
       sh 'docker logout'
     }
+  }
 }
