@@ -171,6 +171,7 @@ spec:
     always {
 
       sh 'docker logout'
+<<<<<<< HEAD:Jenkinsfile copy
 
     }
 
@@ -178,3 +179,8 @@ spec:
 
 }
 
+=======
+    }
+  }
+
+>>>>>>> 1df6883d113c3fc6bad26791b7bb52f8cd4045e3:Jenkinsfile
