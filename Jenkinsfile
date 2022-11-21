@@ -73,7 +73,7 @@ pipeline{
         sh 'kubectl apply -f configuracion/kubernetes-deployment/angular-14-app/manifest.yml -n default --kubeconfig=configuracion/kubernetes-config/config'
       }
 
-    }
+    
   }
 
   post {
