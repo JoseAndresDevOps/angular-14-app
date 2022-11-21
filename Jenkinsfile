@@ -56,7 +56,7 @@ spec:
 
   }
 
-​
+
 
   environment {
 
@@ -66,7 +66,7 @@ spec:
 
   }
 
-​
+
 
   stages {
 
@@ -90,7 +90,7 @@ spec:
 
     }
 
-​
+
 
     stage('Push Image to Docker Hub') {
 
@@ -112,7 +112,7 @@ spec:
 
     }
 
-​
+
 
     stage('Push Image latest to Docker Hub') {
 
@@ -134,11 +134,11 @@ spec:
 
     }
 
-​
+
 
     stage('Deploy to K8s') {
 
-​
+
 
       steps{
 
@@ -158,13 +158,13 @@ spec:
 
       }
 
-​
+
 
     }
 
   }
 
-​
+
 
   post {
 
