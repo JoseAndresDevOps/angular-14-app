@@ -17,6 +17,16 @@ spec:
   containers:
   - name: shell
     image: joseandresdevops/nodonodejs:1.0
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: docker-socket-volume
+    securityContext:
+      privileged: true
+  volumes:
+  - name: docker-socket-volume
+    hostPath:
+      path: /var/run/docker.sock
+      type: Socket
     command:
     - sleep
     args:
@@ -46,7 +56,7 @@ spec:
       steps {
         script {
           dockerImage = docker.build registryFrontend + ":$BUILD_NUMBER"
-          docker.withRegistry( '', registryCredential) {
+          https://github.com/JoseAndresDevOps/angular-14-app.gitdocker.withRegistry( '', registryCredential) {
             dockerImage.push()
           }
         }
@@ -82,6 +92,6 @@ spec:
   post {
     always {
       sh 'docker logout'
-    }
+    }https://github.com/JoseAndresDevOps/angular-14-app.git
   }
 }
