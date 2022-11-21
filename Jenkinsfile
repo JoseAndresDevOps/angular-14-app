@@ -92,6 +92,6 @@ spec:
   post {
     always {
       sh 'docker logout'
-    }https://github.com/JoseAndresDevOps/angular-14-app.git
+    }//https://github.com/JoseAndresDevOps/angular-14-app.git
   }
 }
